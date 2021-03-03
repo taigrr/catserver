@@ -56,10 +56,40 @@ func main() {
 	fmt.Println(dir)
 
 	path := "/css/styles.css"
-	arr := []string{"css/main.css", "css/test.css"}
+	arr := []string{"css/styles.css"}
 	setupRoute(r, path, arr)
-	path = "/html/index.html"
-	arr = []string{"header.html", "index.html"}
+	path = "/index.html"
+	arr = []string{"index.html", "footer.html"}
+	setupRoute(r, path, arr)
+	path = "/about.html"
+	arr = []string{"header.html", "_about.html", "footer.html"}
+	setupRoute(r, path, arr)
+	path = "/scribe.html"
+	arr = []string{"header.html", "_scribe.html", "footer.html"}
+	setupRoute(r, path, arr)
+	path = "/resources.html"
+	arr = []string{"header.html", "_resources.html", "footer.html"}
+	setupRoute(r, path, arr)
+	path = "/contact.html"
+	arr = []string{"header.html", "_contact.html", "footer.html"}
+	setupRoute(r, path, arr)
+	path = "/emr.html"
+	arr = []string{"header.html", "_emr.html", "footer.html"}
+	setupRoute(r, path, arr)
+	path = "/billing.html"
+	arr = []string{"header.html", "_billing.html", "footer.html"}
+	setupRoute(r, path, arr)
+	path = "/coding.html"
+	arr = []string{"header.html", "_coding.html", "footer.html"}
+	setupRoute(r, path, arr)
+	path = "/indexing.html"
+	arr = []string{"header.html", "_indexing.html", "footer.html"}
+	setupRoute(r, path, arr)
+	path = "/transcription.html"
+	arr = []string{"header.html", "_transcription.html", "footer.html"}
+	setupRoute(r, path, arr)
+	path = "/records.html"
+	arr = []string{"header.html", "_records.html", "footer.html"}
 	setupRoute(r, path, arr)
 	var iface http.Handler = &rs
 	http.ListenAndServe(":8080", iface)
